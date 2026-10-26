@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e8">
+  <meta name="description" content="سینمود — بر اساس حالت فیلم ببین">
+  <title>سینمود — بر اساس حالت فیلم ببین</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="سینمود، صفحه اصلی">
+      <span class="brand-mark"><span></span><span></span><span></span></span>
+      <span class="brand-word">سینمود<span class="brand-dot">.</span></span>
+    </a>
+    <nav class="topnav" aria-label="ناوبری اصلی">
+      <a class="nav-link active" href="#collection">کشف فیلم</a>
+      <a class="nav-link" href="#how-it-works">روش کار</a>
+    </nav>
+    <button class="saved-shortcut" id="favorites-toggle" type="button" aria-pressed="false">
+      <span class="heart-outline" aria-hidden="true">♡</span>
+      <span>نشان‌شده‌ها</span>
+      <span class="saved-count" id="favorite-count">۰</span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> باشگاه انتخاب‌های حال‌خوب‌کن</p>
+        <h1 id="hero-title">هر حال و هوایی،<br><span>یک فیلمِ درست.</span></h1>
+        <p class="hero-description">گاهی فقط یک فیلم خوب کم داریم. حالِ امروزت را انتخاب کن؛ سینمود از بین فیلم‌ها، همراه بعدی شب تو را پیدا می‌کند.</p>
+        <a class="hero-cta" href="#collection">بریم فیلم پیدا کنیم <span aria-hidden="true">↙</span></a>
+      </div>
+      <div class="hero-art" aria-label="تصویرسازی گرافیکی حلقه فیلم" role="img">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="sun-disc"></div>
+        <div class="film-card film-card-back"><span>SCENE 02</span><b>یک شب<br>یک انتخاب</b></div>
+        <div class="film-card film-card-front"><span class="mini-label">CINEMOOD / 01</span><div class="poster-symbol"><i></i><i></i><i></i></div><b>حست را<br>دنبال کن.</b><span class="film-bottom">TONIGHT'S MOOD</span></div>
+        <div class="art-sticker">PLAY<br><span>YOUR<br>MOOD</span></div>
+        <span class="art-caption">FIG. 01 — A LITTLE FILM MAGIC</span>
+      </div>
+      <div class="hero-footnote"><span>۰۱ / راهنمای انتخاب امشب</span><span>۲۴ فیلم برای شروعِ یک حال تازه</span></div>
+    </section>
+
+    <section class="mood-section" aria-labelledby="mood-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">اول از همه، خودت</p><h2 id="mood-heading">الان چه حالی داری؟</h2></div>
+        <p class="section-note">هیچ جواب اشتباهی وجود نداره.<br>فقط همونی رو انتخاب کن که بهت نزدیک‌تره.</p>
+      </div>
+      <div class="mood-list" id="mood-list" role="group" aria-label="انتخاب حال">
+        <button class="mood-chip active" type="button" data-mood="all" aria-pressed="true"><span class="mood-emoji">✳</span><span>همه حال‌ها</span></button>
+        <button class="mood-chip" type="button" data-mood="happy" aria-pressed="false"><span class="mood-emoji">☀</span><span>شاد</span></button>
+        <button class="mood-chip" type="button" data-mood="sad" aria-pressed="false"><span class="mood-emoji">☂</span><span>غمگین</span></button>
+        <button class="mood-chip" type="button" data-mood="angry" aria-pressed="false"><span class="mood-emoji">ϟ</span><span>عصبانی</span></button>
+        <button class="mood-chip" type="button" data-mood="surprise" aria-pressed="false"><span class="mood-emoji">✴</span><span>متعجب</span></button>
+        <button class="mood-chip" type="button" data-mood="neutral" aria-pressed="false"><span class="mood-emoji">◒</span><span>خنثی</span></button>
+      </div>
+    </section>
+
+    <section class="collection-section" id="collection" aria-labelledby="collection-heading">
+      <div class="collection-topline"><span class="eyebrow">THE MOVIE SHELF / 2026</span><span class="collection-rule"></span><span class="collection-index">قفسه‌ی شماره ۰۰۱</span></div>
+      <div class="section-heading collection-heading">
+        <div><h2 id="collection-heading">از کجا شروع کنیم؟</h2><p class="collection-subtitle" id="results-summary">چند انتخاب برای تماشای بعدی تو</p></div>
+        <div class="view-note"><span class="tiny-square"></span> انتخاب‌ها، با حال تو تغییر می‌کنن</div>
+      </div>
+      <div class="toolbar">
+        <label class="search-box" for="search-input"><span class="search-icon" aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="اسم فیلم رو فارسی یا انگلیسی بنویس..." autocomplete="off"><kbd>⌘ K</kbd></label>
+        <label class="select-wrap"><span class="sr-only">فیلتر ژانر</span><select id="genre-filter"><option value="all">همه‌ی ژانرها</option></select><span class="select-arrow">⌄</span></label>
+        <label class="select-wrap sort-wrap"><span class="sr-only">مرتب‌سازی</span><select id="sort-select"><option value="recommended">پیشنهاد سینمود</option><option value="rating-desc">بالاترین امتیاز</option><option value="year-desc">جدیدترین سال</option><option value="year-asc">قدیمی‌ترین سال</option></select><span class="select-arrow">⌄</span></label>
+      </div>
+      <div class="active-filters" id="active-filters" hidden></div>
+      <div class="movie-grid" id="movie-grid" aria-live="polite" aria-busy="true">
+        <div class="loading-card"><span class="loader"></span><p>داریم قفسه رو مرتب می‌کنیم...</p></div>
+      </div>
+      <div class="empty-state" id="empty-state" hidden><span class="empty-icon">⌕</span><h3>این یکی رو پیدا نکردیم!</h3><p>عبارت جستجو یا فیلترها رو تغییر بده و دوباره امتحان کن.</p><button class="reset-button" id="reset-filters" type="button">پاک کردن فیلترها</button></div>
+      <div class="collection-footer"><span>پایانِ قفسه، شروعِ داستان توست.</span><span id="footer-count">۲۴ عنوان / یک شبِ سینمایی</span></div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="how-number">یادداشتِ سینمود <span>№ ۰۱</span></div>
+      <div class="how-content"><p class="eyebrow">کمتر گشتن، بیشتر تماشا کردن</p><h2>فیلم خوب، از<br><span>حالِ خوب شروع نمی‌شه.</span></h2><p>فقط کافیه از جایی که هستی شروع کنی. حال رو انتخاب کن، بین پیشنهادها بچرخ و هر فیلمی که به دلت نشست نگه دار. انتخاب نهایی همیشه با خودته.</p></div>
+      <div class="how-steps"><div><span>۱</span><b>حالت رو انتخاب کن</b><p>شاد، غمگین یا هر حال دیگه‌ای.</p></div><div><span>۲</span><b>قفسه رو بگرد</b><p>با جستجو و ژانر، انتخاب‌ها رو محدود کن.</p></div><div><span>۳</span><b>برای بعد نگه دار</b><p>فیلم‌های دوست‌داشتنی رو نشان‌دار کن.</p></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#top"><span class="brand-mark"><span></span><span></span><span></span></span><span class="brand-word">سینمود<span class="brand-dot">.</span></span></a><p>برای شب‌هایی که انتخاب کردن، خودش یک فیلمه.</p><span class="footer-code">MADE FOR YOUR MOOD · ۰۱</span></footer>
+
+  <dialog class="movie-dialog" id="movie-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" id="dialog-close" type="button" aria-label="بستن جزئیات">×</button>
+    <div class="dialog-art" id="dialog-art"></div>
+    <div class="dialog-copy"><p class="eyebrow" id="dialog-kicker">CINEMOOD PICK</p><h2 id="dialog-title"></h2><p class="dialog-original" id="dialog-original"></p><div class="dialog-meta" id="dialog-meta"></div><p class="dialog-description" id="dialog-description"></p><div class="dialog-tags" id="dialog-tags"></div><button class="dialog-favorite" id="dialog-favorite" type="button">♡ افزودن به نشان‌شده‌ها</button></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
